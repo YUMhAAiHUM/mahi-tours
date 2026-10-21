@@ -1,0 +1,20 @@
+import { faqs } from "@/lib/site";
+
+export default function Faq({ withSchema = false }: { withSchema?: boolean }) {
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
+  };
+  return (
+    <div className="faq">
+      {faqs.map((f) => (
+        <details key={f.q}>
+          <summary>{f.q}</summary>
+          <p>{f.a}</p>
+        </details>
+      ))}
+      {withSchema && <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }} />}
+    </div>
+  );
+}
