@@ -1,12 +1,9 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import EnquiryForm from "@/components/EnquiryForm";
 import { site, waLink } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Contact and Quotes",
-  description: "Call or WhatsApp Ajit at Mahi Tours & Travels, New VIP Road, Vadodara on 99138 30802 or 98241 30802, or send your trip details for a quotation.",
-  alternates: { canonical: "/contact" },
-};
+export const metadata: Metadata = pageMeta("Contact & Book a Cab in Vadodara", "Book a car rental or taxi in Vadodara: call or WhatsApp Ajit on 99138 30802 or 98241 30802, or send your trip details for a quick quotation. New VIP Road, Vadodara.", "/contact");
 
 export default function ContactPage() {
   return (

@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import Link from "next/link";
 import CtaBand from "@/components/CtaBand";
 import { services, waLink } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Services: Outstation, Airport Transfers, Tours and Group Travel",
-  description:
-    "Car rental with driver services from Vadodara: city travel, outstation trips, airport transfers, domestic tours, pilgrimages, school and college picnics, corporate travel, weddings and hotel booking help.",
-  alternates: { canonical: "/services" },
-};
+export const metadata: Metadata = pageMeta("Outstation Cab, Airport Taxi & Tour Services from Vadodara", "Taxi service in Vadodara for city travel, outstation cab trips, airport transfers, tours, pilgrimages, school picnics, corporate travel and wedding cars. All with driver.", "/services");
 
 export default function ServicesPage() {
   return (

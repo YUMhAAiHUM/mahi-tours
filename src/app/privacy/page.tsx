@@ -1,11 +1,8 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Privacy",
-  description: "How Mahi Tours & Travels uses the details you send through the website enquiry form and WhatsApp.",
-  alternates: { canonical: "/privacy" },
-};
+export const metadata: Metadata = pageMeta("Privacy Policy", "How Mahi Tours & Travels uses the details you send through the website enquiry form and WhatsApp.", "/privacy");
 
 export default function PrivacyPage() {
   return (

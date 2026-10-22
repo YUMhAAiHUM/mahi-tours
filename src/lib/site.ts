@@ -1,3 +1,5 @@
+import type { Metadata } from "next";
+
 /**
  * Single source of truth for business facts shown on the site.
  * Everything here comes from the client's catalogue or the vehicle photos supplied.
@@ -30,9 +32,13 @@ export function waLink(text: string): string {
   return `https://wa.me/${whatsappNumber}?text=${encodeURIComponent(text)}`;
 }
 
+/** Canonical public domain. */
+export const PRODUCTION_URL = "https://mahitoursandtravels.site";
+
 export function siteUrl(): string {
   const explicit = process.env.NEXT_PUBLIC_SITE_URL;
   if (explicit) return explicit.replace(/\/$/, "");
+  if (process.env.VERCEL_ENV === "production") return PRODUCTION_URL;
   const vercel = process.env.VERCEL_PROJECT_PRODUCTION_URL;
   if (vercel) return `https://${vercel}`;
   return "http://localhost:3000";
@@ -210,3 +216,18 @@ export const lineup = [
   { left: "56%", n: "29", label: "AC mini coach" },
   { left: "80.9%", n: "56", label: "AC coach" },
 ];
+
+
+const OG_IMAGE = { url: "/images/og/og-image.jpg", width: 1200, height: 630, alt: "Mahi Tours & Travels fleet, from a BMW to a 56-seat coach" };
+
+/** Per-page metadata with matching canonical, Open Graph and Twitter tags. */
+export function pageMeta(title: string, description: string, path: string, absoluteTitle = false): Metadata {
+  const full = absoluteTitle ? title : `${title} | ${site.name}`;
+  return {
+    title: absoluteTitle ? { absolute: title } : title,
+    description,
+    alternates: { canonical: path },
+    openGraph: { type: "website", locale: "en_IN", siteName: site.name, url: path, title: full, description, images: [OG_IMAGE] },
+    twitter: { card: "summary_large_image", title: full, description, images: [OG_IMAGE.url] },
+  };
+}

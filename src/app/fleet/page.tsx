@@ -1,14 +1,10 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import { fleet, fleetCategories, waLink, weddingCars } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "Fleet: Cars, Tempo Traveller, Force Urbania and Coaches",
-  description:
-    "See the Mahi Tours & Travels fleet in Vadodara: BMW, Ertiga and Innova Crysta, a 12-seat Maharaja traveller, Force Urbania, 20-seat Tempo Traveller, 28 and 29-seat mini coaches and a 56-seat AC coach, all with a driver.",
-  alternates: { canonical: "/fleet" },
-};
+export const metadata: Metadata = pageMeta("Cars, Tempo Traveller & Bus on Rent in Vadodara with Driver", "Hire a car, Innova Crysta, Ertiga, Tempo Traveller, Force Urbania, mini bus or 56-seat AC coach with driver in Vadodara. 4 to 56 passengers. Call 99138 30802 for a quote.", "/fleet");
 
 export default function FleetPage() {
   return (

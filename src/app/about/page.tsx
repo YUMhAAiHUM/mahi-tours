@@ -1,14 +1,11 @@
 import type { Metadata } from "next";
+import { pageMeta } from "@/lib/site";
 import Link from "next/link";
 import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = {
-  title: "About",
-  description: "Mahi Tours & Travels is a car rental with driver business on New VIP Road, Vadodara, run by Ajit, offering cars, travellers and coaches for 4 to 56 passengers.",
-  alternates: { canonical: "/about" },
-};
+export const metadata: Metadata = pageMeta("About Us: Car Rental with Driver, New VIP Road, Vadodara", "Mahi Tours & Travels is a Vadodara car rental and taxi service on New VIP Road, run by Ajit, with cars, travellers and coaches for 4 to 56 passengers.", "/about");
 
 export default function AboutPage() {
   return (
