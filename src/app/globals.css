@@ -118,10 +118,10 @@ h1, h2, h3, h4, p { margin: 0; }
 /* ===== Hero & lineup ===== */
 .hero { padding-top: 24px; }
 .hero .lineup { margin-top: 0; }
-@media (max-width: 720px) { .hero { padding-top: 4px; } .hero-top { margin-top: 28px; } }
 .hero-top { margin-top: 36px; display: flex; flex-wrap: wrap; justify-content: space-between; align-items: flex-end; gap: 28px 48px; }
 .hero-top h1 { flex: 1 1 600px; max-width: 15ch; }
 .hero-title { font-size: clamp(32px, 4.4vw, 58px); }
+@media (max-width: 720px) { .hero { padding-top: 4px; } .hero-top { margin-top: 28px; } }
 .hero-side { flex: 0 1 360px; min-width: 0; padding-bottom: 8px; }
 .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 24px; margin-top: 22px; }
 .lineup { margin-top: 40px; overflow-x: auto; scrollbar-width: thin; }
