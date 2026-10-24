@@ -48,7 +48,7 @@ const businessSchema = {
   url: siteUrl(),
   image: `${siteUrl()}/images/og/og-image.jpg`,
   telephone: site.phones.map((p) => p.e164),
-  email: site.emails,
+  email: site.emails[0],
   address: {
     "@type": "PostalAddress",
     streetAddress: site.address.street,

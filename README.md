@@ -1,6 +1,6 @@
 # Mahi Tours & Travels — website
 
-Car rental with driver, New VIP Road, Vadodara. Next.js 15 (App Router) + TypeScript, no database.
+Car rental with driver, Karelibagh, Vadodara. Next.js 15 (App Router) + TypeScript, no database.
 
 ## Run locally
 

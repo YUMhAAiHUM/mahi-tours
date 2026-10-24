@@ -3,7 +3,7 @@ import { pageMeta } from "@/lib/site";
 import EnquiryForm from "@/components/EnquiryForm";
 import { site, waLink } from "@/lib/site";
 
-export const metadata: Metadata = pageMeta("Contact & Book a Cab in Vadodara", "Book a car rental or taxi in Vadodara: call or WhatsApp Ajit on 99138 30802 or 98241 30802, or send your trip details for a quick quotation. New VIP Road, Vadodara.", "/contact");
+export const metadata: Metadata = pageMeta("Contact & Book a Cab in Vadodara", "Book a car rental or taxi in Vadodara: call or WhatsApp Ajit on 99138 30802 or 98241 30802, or send your trip details for a quick quotation. Karelibagh, Vadodara.", "/contact");
 
 export default function ContactPage() {
   return (
@@ -29,7 +29,7 @@ export default function ContactPage() {
             </li>
             <li>
               <strong>Location</strong>
-              <span style={{ fontSize: 19, fontWeight: 600 }}>{site.address.street}, {site.address.locality}, {site.address.region}</span>
+              <span style={{ fontSize: 19, fontWeight: 600 }}>{site.address.street}, {site.address.locality}, {site.address.region}, India</span>
             </li>
           </ul>
         </div>

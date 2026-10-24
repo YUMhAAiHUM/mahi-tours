@@ -5,14 +5,14 @@ import Image from "next/image";
 import CtaBand from "@/components/CtaBand";
 import { site } from "@/lib/site";
 
-export const metadata: Metadata = pageMeta("About Us: Car Rental with Driver, New VIP Road, Vadodara", "Mahi Tours & Travels is a Vadodara car rental and taxi service on New VIP Road, run by Ajit, with cars, travellers and coaches for 4 to 56 passengers.", "/about");
+export const metadata: Metadata = pageMeta("About Us: Car Rental with Driver, Karelibagh, Vadodara", "Mahi Tours & Travels is a Vadodara car rental and taxi service in Karelibagh, run by Ajit, with cars, travellers and coaches for 4 to 56 passengers.", "/about");
 
 export default function AboutPage() {
   return (
     <>
       <section className="container page-hero">
         <h1 className="h1">About Mahi Tours &amp; Travels</h1>
-        <p className="lead">A Vadodara car rental business on New VIP Road. Every vehicle comes with a driver, from a single car to the airport to coaches for a whole school.</p>
+        <p className="lead">A Vadodara car rental business in Karelibagh. Every vehicle comes with a driver, from a single car to the airport to coaches for a whole school.</p>
       </section>
       <section className="container section split">
         <h2 className="h2">What we do</h2>

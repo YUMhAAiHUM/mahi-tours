@@ -15,9 +15,9 @@ export const site = {
     { display: "99138 30802", e164: "+919913830802" },
     { display: "98241 30802", e164: "+919824130802" },
   ],
-  emails: ["mahi.tours@gmail.com", "mahi.tours10@gmail.com"],
+  emails: ["mahi.tours10@gmail.com"],
   address: {
-    street: "New VIP Road",
+    street: "FF7, Charbhuja Complex, Near Ambalal Park, Karelibagh",
     locality: "Vadodara",
     region: "Gujarat",
     country: "IN",
