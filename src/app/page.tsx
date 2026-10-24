@@ -30,7 +30,7 @@ export default function Home() {
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="hero container" aria-labelledby="hero-heading">
         <div className="hero-top">
-          <h1 id="hero-heading" className="h1"><span className="sr-only">Car rental with driver in Vadodara: </span>From a wedding car to a 56-seat coach.</h1>
+          <h1 id="hero-heading" className="h1 hero-title"><span className="sr-only">Car rental with driver in Vadodara: </span>From a wedding car to a 56-seat coach.</h1>
           <div className="hero-side">
             <p className="lead">Car rental with a driver from Vadodara, for city runs, outstation trips, airport transfers and group travel.</p>
             <div className="hero-actions">

@@ -26,27 +26,29 @@ export default function Header() {
   return (
     <header className="site-header">
       <div className="container">
-        <Link href="/" className="brand" aria-label="Mahi Tours & Travels, home">
-          <span className="brand-mark">MAHI</span>
-          <span className="brand-sub">Tours &amp; Travels</span>
-        </Link>
-        <nav className="nav" aria-label="Main">
+        <nav className="nav nav-left" aria-label="Main">
           {links.map((l) => (
             <Link key={l.href} href={l.href} aria-current={pathname === l.href ? "page" : undefined}>
               {l.label}
             </Link>
           ))}
-          <Link href="/#quote" className="btn btn-primary">Get a quote</Link>
         </nav>
-        <button
-          type="button"
-          className="nav-toggle"
-          aria-expanded={open}
-          aria-controls="mobile-nav"
-          onClick={() => setOpen((o) => !o)}
-        >
-          {open ? "Close" : "Menu"}
-        </button>
+        <Link href="/" className="brand" aria-label="Mahi Tours & Travels, home">
+          <span className="brand-mark">MAHI</span>
+          <span className="brand-sub">Tours &amp; Travels</span>
+        </Link>
+        <div className="header-right">
+          <Link href="/#quote" className="btn btn-primary header-cta">Get a quote</Link>
+          <button
+            type="button"
+            className="nav-toggle"
+            aria-expanded={open}
+            aria-controls="mobile-nav"
+            onClick={() => setOpen((o) => !o)}
+          >
+            {open ? "Close" : "Menu"}
+          </button>
+        </div>
       </div>
       <nav id="mobile-nav" className="mobile-nav" data-open={open} aria-label="Mobile">
         <ul>
