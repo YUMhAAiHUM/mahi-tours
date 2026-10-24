@@ -6,7 +6,7 @@ import EnquiryForm from "@/components/EnquiryForm";
 import FleetGrid from "@/components/FleetGrid";
 import Faq from "@/components/Faq";
 import CtaBand from "@/components/CtaBand";
-import { faqs, fleet, pageMeta, services, waLink, weddingCars } from "@/lib/site";
+import { fleet, pageMeta, services, waLink, weddingCars } from "@/lib/site";
 
 export const metadata: Metadata = pageMeta(
   "Car Rental with Driver in Vadodara | Taxi, Outstation Cab & Bus Hire | Mahi Tours & Travels",
@@ -15,20 +15,14 @@ export const metadata: Metadata = pageMeta(
   true,
 );
 
-const faqSchema = {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  mainEntity: faqs.map((f) => ({ "@type": "Question", name: f.q, acceptedAnswer: { "@type": "Answer", text: f.a } })),
-};
-
 const groupFleet = fleet.filter((v) => v.category !== "cars");
 
 export default function Home() {
   const [bmw, vintage, audi] = weddingCars;
   return (
     <>
-      <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }} />
       <section className="hero container" aria-labelledby="hero-heading">
+        <Lineup />
         <div className="hero-top">
           <h1 id="hero-heading" className="h1 hero-title"><span className="sr-only">Car rental with driver in Vadodara: </span>From a wedding car to a 56-seat coach.</h1>
           <div className="hero-side">
@@ -39,7 +33,6 @@ export default function Home() {
             </div>
           </div>
         </div>
-        <Lineup />
       </section>
 
       <section id="quote" className="container" style={{ paddingTop: 36, scrollMarginTop: 16 }}>
