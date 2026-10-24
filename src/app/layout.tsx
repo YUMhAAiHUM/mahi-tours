@@ -54,6 +54,7 @@ const businessSchema = {
     streetAddress: site.address.street,
     addressLocality: site.address.locality,
     addressRegion: site.address.region,
+    postalCode: site.address.postalCode,
     addressCountry: site.address.country,
   },
   areaServed: [{ "@type": "City", name: "Vadodara" }, { "@type": "State", name: "Gujarat" }],

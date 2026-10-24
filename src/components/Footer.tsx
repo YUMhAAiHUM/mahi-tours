@@ -10,7 +10,7 @@ export default function Footer() {
           <div>
             <p className="footer-brand">MAHI</p>
             <p>Tours &amp; Travels</p>
-            <p style={{ marginTop: 18 }}>{site.address.street}, {site.address.locality}, {site.address.region}, India</p>
+            <p style={{ marginTop: 18 }}>{site.address.street}, {site.address.locality}, {site.address.region} {site.address.postalCode}, India</p>
             <p style={{ marginTop: 6 }}>Safe, comfortable, reliable, affordable.</p>
           </div>
           <div>

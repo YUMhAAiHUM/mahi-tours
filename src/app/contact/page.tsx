@@ -29,7 +29,7 @@ export default function ContactPage() {
             </li>
             <li>
               <strong>Location</strong>
-              <span style={{ fontSize: 19, fontWeight: 600 }}>{site.address.street}, {site.address.locality}, {site.address.region}, India</span>
+              <span style={{ fontSize: 19, fontWeight: 600 }}>{site.address.street}, {site.address.locality}, {site.address.region} {site.address.postalCode}, India</span>
             </li>
           </ul>
         </div>

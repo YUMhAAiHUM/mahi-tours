@@ -20,6 +20,7 @@ export const site = {
     street: "FF7, Charbhuja Complex, Near Ambalal Park, Karelibagh",
     locality: "Vadodara",
     region: "Gujarat",
+    postalCode: "390018",
     country: "IN",
   },
   values: ["Safe", "Comfortable", "Reliable", "Affordable"],
